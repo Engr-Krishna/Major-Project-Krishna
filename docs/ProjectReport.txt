@@ -1,0 +1,97 @@
+------------------------------------------------------------
+PROJECT REPORT
+------------------------------------------------------------
+Course Code: CSEG1032
+Course Title: Programming in C
+Project Title: Personal Health Dashboard
+Student Name(s): [Enter Name(s)]
+Roll Number(s): [Enter Roll Number(s)]
+Semester: [Enter Semester]
+------------------------------------------------------------
+
+1. ABSTRACT
+This project implements a menu-driven Personal Health Dashboard using the C programming language. 
+The system allows users to create a profile and track daily health parameters such as calorie intake,
+steps walked, and body weight. It also provides BMI calculation and personalized suggestions based 
+on the user's goals (Gain, Maintain, or Lose weight). The project demonstrates the use of structures, 
+file handling, modular programming, and function-based program design.
+
+------------------------------------------------------------
+2. OBJECTIVE
+The main objective of this project is to apply core concepts of the C language to build a functional 
+health-tracking application. The project aims to test students’ ability to:
+
+- Use structures to store complex user information.
+- Implement modular programming using multiple source files.
+- Perform file operations for saving and loading user profiles.
+- Apply conditional logic to generate personalized suggestions.
+- Design a simple text-based interface that resembles a real-world application.
+
+------------------------------------------------------------
+3. PROBLEM DEFINITION
+With increasing awareness of fitness and personal health, individuals often require simple tools 
+to monitor daily health metrics. However, most fitness applications are complex and require 
+internet connectivity.
+
+This project provides a beginner-friendly, offline, text-based Personal Health Dashboard that can:
+- Store user details such as age, height, weight, activity level, and goals.
+- Track calories consumed, steps taken, and daily weight updates.
+- Calculate BMI and provide health insights.
+- Offer daily suggestions based on user progress.
+
+------------------------------------------------------------
+4. SYSTEM DESIGN AND ARCHITECTURE
+The project follows a modular structure divided into separate components:
+
+- `main.c`  
+  Handles the main menu, user flow, and high-level navigation.
+
+- `student.c` (or `user.c`)  
+  Contains functions related to user creation, loading, updating, and weight management.
+
+- `utils.c`  
+  Includes helper functions for BMI calculation, calorie calculation, and suggestions.
+
+- Header Files (`student.h`, `utils.h`)  
+  Store structure definitions and function prototypes.
+
+**Flow of the Program**
+1. Display welcome screen and login/signup options.  
+2. If new user → enter all details and save to file.  
+3. If returning user → load data from file.  
+4. Display main menu:
+   - Track Calories
+   - Track Steps
+   - Update Weight
+   - Check BMI
+   - View Suggestions
+5. Update and overwrite data in file after each operation.
+
+------------------------------------------------------------
+5. IMPLEMENTATION DETAILS
+Key C Programming Features Used:
+
+- **Structures**  
+  To store user profile data such as name, age, height, weight, goals, calories, and steps.
+
+- **File Handling**  
+  `fopen()`, `fwrite()`, `fread()`, and `fclose()` used for persistent user data storage.
+
+- **Functions & Modular Programming**  
+  Each feature is written as a separate function for clean code organization.
+
+- **Conditional Statements**  
+  To generate suggestions depending on the user’s goals and progress.
+
+- **Loops & Menu-Driven Interface**  
+  Makes the system interactive and user-friendly.
+
+**Example Snippet (Saving User Data):**
+```c
+FILE *fp = fopen("user.txt", "wb");
+if (fp != NULL) {
+    fwrite(&user, sizeof(struct User), 1, fp);
+    fclose(fp);
+} else {
+    printf("Error saving user data!\n");
+}
