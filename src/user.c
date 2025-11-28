@@ -4,7 +4,7 @@
 #include "user.h"
 #include "utils.h"
 
-// ======================= SIGNUP =======================
+//  SIGNUP 
 void signup() {
     struct User user;
     printf("\n========= Fitness Tracker =========\n");
@@ -60,7 +60,7 @@ void signup() {
     mainmenu(user);
 }
 
-// ======================= CHECK IF USER EXISTS =======================
+//  CHECK IF USER EXISTS 
 int userexists(char name[], char contact[], struct User *u) {
     FILE *fp = fopen("user.text", "r");
     if (!fp) return 0;
@@ -84,7 +84,7 @@ int userexists(char name[], char contact[], struct User *u) {
     return 0;
 }
 
-// ======================= SAVE USER DATA =======================
+//  SAVE USER DATA 
 void saveuser(struct User u) {
     FILE *fp = fopen("user.text", "a");
     if (!fp) {
@@ -101,7 +101,7 @@ void saveuser(struct User u) {
     fclose(fp);
 }
 
-// ======================= MAIN MENU =======================
+//  MAIN MENU 
 void mainmenu(struct User user) {
     int choice;
     float calorieNeed = calculateBMR(user);
@@ -149,3 +149,4 @@ void mainmenu(struct User user) {
         }
     } while (choice != 6);
 }
+
