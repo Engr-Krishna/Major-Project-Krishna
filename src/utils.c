@@ -2,7 +2,7 @@
 #include "utils.h"
 #include "user.h"
 
-// ======================= CALCULATE BMR =======================
+// CALCULATE BMR 
 float calculateBMR(struct User u) {
     float bmr;
 
@@ -26,7 +26,7 @@ float calculateBMR(struct User u) {
     return bmr;
 }
 
-// ======================= CALORIES =======================
+//  CALORIES
 void calories(float *calorieintake, float calorieNeed) {
     int ch;
     float add;
@@ -51,7 +51,7 @@ void calories(float *calorieintake, float calorieNeed) {
     } while (ch != 3);
 }
 
-// ======================= STEPS =======================
+//  STEPS 
 void steps(int *stepswalked, int goalSteps) {
     printf("\n--- STEPS SECTION ---\n");
     printf("Goal Steps: %d\n", goalSteps);
@@ -60,7 +60,7 @@ void steps(int *stepswalked, int goalSteps) {
     scanf("%d", stepswalked);
 }
 
-// ======================= WEIGHT =======================
+//  WEIGHT 
 void weight(struct User *u) {
     printf("\n--- WEIGHT SECTION ---\n");
     printf("Current Weight: %.2f\n", u->currentweight);
@@ -70,7 +70,7 @@ void weight(struct User *u) {
     scanf("%f", &u->currentweight);
 }
 
-// ======================= BMI =======================
+//  BMI 
 void bmi(struct User u) {
     float bmi = u.currentweight / ((u.height / 100) * (u.height / 100));
 
@@ -83,7 +83,7 @@ void bmi(struct User u) {
     else printf("Obese\n");
 }
 
-// ======================= SUGGESTIONS =======================
+//  SUGGESTIONS 
 void suggestions(struct User u, float calorieNeed, float calorieintake, int stepswalked) {
     printf("\n--- SUGGESTIONS ---\n");
 
@@ -104,3 +104,4 @@ void suggestions(struct User u, float calorieNeed, float calorieintake, int step
     else
         printf("Good! Steps today: %d\n", stepswalked);
 }
+
