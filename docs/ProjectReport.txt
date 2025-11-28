@@ -46,13 +46,13 @@ The project follows a modular structure divided into separate components:
 - `main.c`  
   Handles the main menu, user flow, and high-level navigation.
 
-- `student.c` (or `user.c`)  
+- `user.c`  
   Contains functions related to user creation, loading, updating, and weight management.
 
 - `utils.c`  
   Includes helper functions for BMI calculation, calorie calculation, and suggestions.
 
-- Header Files (`student.h`, `utils.h`)  
+- Header Files (`user.h`, `utils.h`)  
   Store structure definitions and function prototypes.
 
 **Flow of the Program**
@@ -95,3 +95,4 @@ if (fp != NULL) {
 } else {
     printf("Error saving user data!\n");
 }
+
