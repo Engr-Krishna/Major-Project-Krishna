@@ -1,12 +1,12 @@
 ------------------------------------------------------------
 PROJECT REPORT
 ------------------------------------------------------------
-Course Code: CSEG1032
+Course Code: CSEG1041_5
 Course Title: Programming in C
 Project Title: Personal Health Dashboard
-Student Name(s): [Enter Name(s)]
-Roll Number(s): [Enter Roll Number(s)]
-Semester: [Enter Semester]
+Student Name: Krishna Pipraiya 
+Roll Number: 590023740
+Semester: 1st
 ------------------------------------------------------------
 
 1. ABSTRACT
@@ -95,4 +95,5 @@ if (fp != NULL) {
 } else {
     printf("Error saving user data!\n");
 }
+
 
